@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Galeri Undangan Adat Indonesia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Plus+Jakarta+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #1f1a17;
+        --muted: #6a5c52;
+        --sand: #f7efe8;
+        --terracotta: #c0563f;
+        --jade: #2f6f62;
+        --sun: #f2c879;
+        --paper: #fff8f2;
+        --shadow: 0 20px 60px rgba(31, 26, 23, 0.16);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(1200px 800px at 10% 10%, #ffe9d6 0%, transparent 55%),
+          radial-gradient(1200px 800px at 90% 20%, #d7efe6 0%, transparent 55%),
+          linear-gradient(160deg, #fff1e4 0%, #f6f1eb 55%, #f1e8df 100%);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+      }
+
+      main {
+        width: min(1100px, 92vw);
+        padding: 56px 0 72px;
+        position: relative;
+      }
+
+      .ornament {
+        position: absolute;
+        top: 20px;
+        right: -40px;
+        width: 180px;
+        height: 180px;
+        background: conic-gradient(from 120deg, var(--sun), var(--terracotta), var(--jade));
+        border-radius: 28px;
+        opacity: 0.2;
+        filter: blur(2px);
+      }
+
+      header {
+        display: grid;
+        gap: 14px;
+        max-width: 720px;
+      }
+
+      h1 {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(2.1rem, 3.4vw, 3.4rem);
+        margin: 0;
+        letter-spacing: 0.3px;
+      }
+
+      p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.7;
+        font-size: 1.02rem;
+      }
+
+      .grid {
+        margin-top: 36px;
+        display: grid;
+        gap: 22px;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      }
+
+      .card {
+        background: var(--paper);
+        border-radius: 22px;
+        padding: 22px;
+        box-shadow: var(--shadow);
+        display: grid;
+        gap: 14px;
+        position: relative;
+        overflow: hidden;
+        transform: translateY(8px);
+        opacity: 0;
+        animation: reveal 600ms ease forwards;
+      }
+
+      .card:nth-child(2) {
+        animation-delay: 120ms;
+      }
+
+      .card:nth-child(3) {
+        animation-delay: 240ms;
+      }
+
+      .card:nth-child(4) {
+        animation-delay: 360ms;
+      }
+
+      .card h2 {
+        font-family: "Playfair Display", serif;
+        margin: 0;
+        font-size: 1.3rem;
+      }
+
+      .card p {
+        font-size: 0.96rem;
+      }
+
+      .tag {
+        align-self: start;
+        justify-self: start;
+        font-size: 0.76rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--paper);
+        background: var(--terracotta);
+        padding: 6px 12px;
+        border-radius: 999px;
+      }
+
+      .actions {
+        margin-top: 10px;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      a.button {
+        text-decoration: none;
+        color: var(--paper);
+        background: var(--jade);
+        padding: 10px 16px;
+        border-radius: 999px;
+        font-weight: 600;
+        font-size: 0.92rem;
+        transition: transform 200ms ease, box-shadow 200ms ease;
+        box-shadow: 0 8px 18px rgba(47, 111, 98, 0.28);
+      }
+
+      a.button.secondary {
+        background: var(--ink);
+        box-shadow: 0 8px 18px rgba(31, 26, 23, 0.24);
+      }
+
+      a.button:hover {
+        transform: translateY(-2px);
+      }
+
+      footer {
+        margin-top: 40px;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      @keyframes reveal {
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: 640px) {
+        main {
+          padding-top: 40px;
+        }
+
+        .ornament {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="ornament" aria-hidden="true"></div>
+      <header>
+        <p class="tag">Galeri</p>
+        <h1>Template Undangan Adat Indonesia</h1>
+        <p>
+          Pilih desain yang ingin kamu lihat. Setiap halaman adalah template mandiri
+          yang bisa langsung kamu ubah teksnya.
+        </p>
+      </header>
+
+      <section class="grid">
+        <article class="card">
+          <h2>Balinese Tropical</h2>
+          <p>Nuansa hangat dengan sentuhan tropis Bali dan elemen alam.</p>
+          <div class="actions">
+            <a class="button" href="Balinese Tropical Invitation.html">Lihat Desain</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>Betawi Festive</h2>
+          <p>Warna cerah dan motif khas Betawi untuk momen yang meriah.</p>
+          <div class="actions">
+            <a class="button" href="Betawi Festive Invitation.html">Lihat Desain</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>Javanese Batik</h2>
+          <p>Gaya elegan dengan pola batik klasik khas Jawa.</p>
+          <div class="actions">
+            <a class="button" href="Javanese Batik Invitation.html">Lihat Desain</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>Toraja Weaving</h2>
+          <p>Motif tenun Toraja dengan tone hangat dan tradisional.</p>
+          <div class="actions">
+            <a class="button" href="Toraja Weaving Invitation.html">Lihat Desain</a>
+          </div>
+        </article>
+      </section>
+
+      <footer>
+        Kamu bisa menambah desain baru dengan menyalin salah satu file HTML,
+        lalu menambahkan tautannya di halaman ini.
+      </footer>
+    </main>
+  </body>
+</html>
